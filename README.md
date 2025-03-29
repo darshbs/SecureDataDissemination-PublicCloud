@@ -1,5 +1,7 @@
 # 🛡️ Secure Data Group Sharing and Dissemination with Attribute and Time Conditions in Public Cloud
 
+This project was submitted in partial fulfilment of **BACHELOR OF TECHNOLOGY** in **COMPUTER SCIENCE AND ENGINEERING**, Under the guidance of Dr. V. SAMBASIVA RAO M.Tech., Ph.D.,  Batch 2018 - 2022 at ST. MARY’S ENGINEERING COLLEGE (AFFILIATED TO JNTUH, APPROVED BY AICTE, ACCREDITED BY NAAC).
+
 ##  📂 Project Overview
 This project focuses on secure data sharing in a public cloud environment while enforcing attribute-based access control and time-bound conditions. The goal is to ensure that only authorized users can access specific data based on predefined attributes and time constraints.
 
@@ -42,11 +44,10 @@ Clone the Repository:
   ```
 2. jsp Files are located in /web folder, run **user.jsp**
 
-
 ### Future Enhancements
 🔹 Integration with blockchain for enhanced security.  
 🔹 Real-time monitoring & auditing of access logs.  
 🔹 Support for multi-cloud storage solutions.  
 
-Contributing
+
 Contributions are welcome! Feel free to submit pull requests or report issues. 😊
