@@ -4,20 +4,18 @@
 This project focuses on secure data sharing in a public cloud environment while enforcing attribute-based access control and time-bound conditions. The goal is to ensure that only authorized users can access specific data based on predefined attributes and time constraints.
 
 ### Key Features
-✅ Attribute-Based Access Control (ABAC) – Ensures data access based on user roles, permissions, and attributes. 
-✅ Time-Based Conditions – Restricts access based on predefined time windows. 
-✅ Public Cloud Storage – Uses cloud infrastructure to store and manage data securely. 
-✅ Secure Data Dissemination – Prevents unauthorized access and ensures data integrity. 
+✅ Attribute-Based Access Control (ABAC) – Ensures data access based on user roles, permissions, and attributes.
+✅ Time-Based Conditions – Restricts access based on predefined time windows.
+✅ Public Cloud Storage – Uses cloud infrastructure to store and manage data securely.
+✅ Secure Data Dissemination – Prevents unauthorized access and ensures data integrity.
 
 ## 🚀 Getting Started
 ### Technologies Used
-Programming Language: [Python/Java] (Specify the primary language)
-
-Cloud Service: AWS / Google Cloud / Azure (Specify if applicable)
-
-Encryption Methods: AES / RSA (Mention the security algorithms used)
-
-Database: MySQL / MongoDB / Firebase (Specify the database if used)
+- Technology: Java7 and J2EEE
+- Programming Language: Java (version: J2SDK1.5)
+- Web Technologies : HTML, CSS, Js
+- Web Server: Tomcat
+- Database: MySQL 
 
 ### Installation & Setup
 Clone the Repository:
