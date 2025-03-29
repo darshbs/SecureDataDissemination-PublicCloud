@@ -49,5 +49,8 @@ Clone the Repository:
 🔹 Real-time monitoring & auditing of access logs.  
 🔹 Support for multi-cloud storage solutions.  
 
-
-Contributions are welcome! Feel free to submit pull requests or report issues. 😊
+## 👨‍💻 Contributors / Team
+- **[M. Sai Darshan Balaji]** - Team Lead, Project Development & Documentation
+- **[M. Jaya Krishna Sai]** - Backend Development & Security Implementation
+- **[T. Amarnath Goud]** - Frontend Development & UI Design
+- **[Md.  Ali Ahmad Khurshid]** - Database Management & Testing
