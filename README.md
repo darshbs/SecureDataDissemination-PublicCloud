@@ -28,8 +28,8 @@ Clone the Repository:
 
 1. Clone the repository:
   ```bash 
-  git clone https://github.com/your-username/repository-name.git
-  cd repository-name
+  git clone https://github.com/darshbs/SecureDataDissemination-PublicCloud
+  cd SecureDataDissemination-PublicCloud
   ```
 
 Install Dependencies:
