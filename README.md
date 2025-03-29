@@ -50,7 +50,7 @@ Clone the Repository:
 🔹 Support for multi-cloud storage solutions.  
 
 ## 👨‍💻 Contributors / Team
-- **[M. Sai Darshan Balaji]** - Team Lead, Project Development & Documentation
-- **[M. Jaya Krishna Sai]** - Backend Development & Security Implementation
-- **[T. Amarnath Goud]** - Frontend Development & UI Design
-- **[Md.  Ali Ahmad Khurshid]** - Database Management & Testing
+- **M. Sai Darshan Balaji** - Team Lead, Project Development & Documentation
+- **M. Jaya Krishna Sai** - Backend Development & Security Implementation
+- **T. Amarnath Goud** - Frontend Development & UI Design
+- **Md.  Ali Ahmad Khurshid** - Database Management & Testing
