@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Home</title>
+	 
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<style>
+ 
+	</style>
+</head>
+<body>
+	<div id="header">
+		<div>
+			<p class="sp"> Secure Storage Auditing with Efficient Key Updates<br> for Cognitive Industrial  IoT Environment </p>
+			
+			<ul class="navigation">
+				<li>
+					<a class="active" href="index.html">Home</a>
+				</li>
+				<li>
+					<a  href="auditor.jsp">Auditor</a>
+				</li>
+				<li>
+					<a href="user.jsp">User</a>
+				</li>
+				 
+				
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="content">
+			<div>
+				<div>
+					<h1>Abstract</h1>
+					<ul>
+					  <li>  
+							<p>Cloud storage auditing is viewed as an important service to verify the integrity of the data in public cloud. Current auditing protocols are all based on the assumption that the client's secret key for auditing is absolutely secure. However, such assumption may not always be held, due to the possibly weak sense of security and/or low security settings at the client. If such a secret key for auditing is exposed, most of the current auditing protocols would inevitably become unable to work. In this paper, we focus on this new aspect of cloud storage auditing. We investigate how to reduce the damage of the client's key exposure in cloud storage auditing, and give the first practical solution for this new problem setting. We formalize the definition and the security model of auditing protocol with key-exposure resilience and propose such a protocol. In our design, we employ the binary tree structure and the preorder traversal technique to update the secret keys for the client. We also develop a novel authenticator construction to support the forward security and the property of blockless verifiability. The security proof and the performance analysis show that our proposed protocol is secure and efficient.</p>
+					  </li>  
+					</ul>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="abc" align="center">
+			
+					<p>
+					 &copy; Copyright 2021. All Rights Reserved
+					</p>
+				 
+		</div>
+	</div>
+</body>
+</html>

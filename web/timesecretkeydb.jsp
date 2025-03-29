@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+ <%@ page language="java" import="java.sql.*,com.dbasecon.Databasecon" errorPage="" %>
+ 
+ <%
+ //String fid=request.getParameter("fid");
+ 
+ String fid=(String)session.getAttribute("fileid");
+ 
+ String group=(String)session.getAttribute("group");
+ String key1=request.getParameter("pskey1");
+ String key2=request.getParameter("pskey2"); 
+ String key3=request.getParameter("pskey3");
+ String key4=request.getParameter("pskey4");
+ System.out.println("File id : "+fid);
+ System.out.println("Key1 : "+key1);
+ System.out.println("Key2 : "+key2);
+ System.out.println("Key3 : "+key3);
+ System.out.println("Key4 : "+key4);
+ 
+ String gen="Generated";
+ 
+ try
+ {
+
+	 	Connection con=Databasecon.getConnection();
+	 	String query="update file set skey1='"+key1+"',skey2='"+key2+"',skey3='"+key3+"',skey4='"+key4+"', status='"+gen+"' where sid='"+fid+"' and groups='"+group+"'";
+	 	PreparedStatement pstmt=con.prepareStatement(query);
+	 	int x=pstmt.executeUpdate();
+	 	if(x>0)
+	 	{
+	 		System.out.println("Success");
+	 		response.sendRedirect("fileview.jsp");
+	 	}else
+	 	{
+                        
+	 		System.out.println("Failed");
+	 		response.sendRedirect("fileview.jsp");
+	 	}
+	 	
+ }catch(Exception e)
+ {
+	 e.printStackTrace();
+ }
+ 
+ 
+ 
+ 
+ 
+ %>
+ 

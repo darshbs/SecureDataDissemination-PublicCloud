@@ -1,0 +1,45 @@
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Registration</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="header">
+		<div>
+		 <h1 align="center"><font size="6" color="brown"> <b>Secure Data Group Sharing and Dissemination with Attribute and Time Conditions in Public Cloud </font></h2>
+			<ul class="navigation">
+				<li><a href="css/tabzoom.cssindex.html">Home</a></li>
+				
+				<li><a class="active" href="user.jsp">User</a></li>
+
+				<li><a href="logout.jsp">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div class="content">
+			<div>
+				<div>
+					<h1>About</h1>
+
+					
+
+
+
+				</div>
+			</div>
+		</div>
+		   
+	</div>
+	<div id="footer">
+		<div class="abc" align="center">
+
+			<p>&copy; Copyright 2021. All Rights Reserved</p>
+
+		</div>
+	</div>
+</body>
+</html>

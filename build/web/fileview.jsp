@@ -1,0 +1,108 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="org.apache.commons.lang3.RandomStringUtils"%>
+<%@ page language="java" import="javax.script.*"%>
+ <%@ page language="java" import="java.sql.*,com.dbasecon.Databasecon" errorPage="" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>File View</title>
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/table.css" rel="stylesheet" type="text/css">
+<link href="css/tabzoom.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+ <%String group=(String)session.getAttribute("group");String email=(String)session.getAttribute("email");%>
+	<div id="header">
+		<div>
+		 <h1 align="center"><font size="6" color="brown"> <b>Secure Data Group Sharing and Dissemination with Attribute and Time Conditions in Public Cloud </font></h2>
+			<ul class="navigation">
+				<!-- <li><a href="/CloudStorageAuditKey/index.html">Home</a></li> -->
+				 
+				 
+				<!-- <li><a href= "pubkey.jsp">Key</a></li>-->
+				<li><a href="fileupload.jsp">File Storage</a></li>
+				<li><a class="active" href="fileview.jsp">File View</a></li>
+		 		<!-- <li><a href="fcontview.jsp">File Cont</a></li>  
+		 		<li><a href="fdownload.jsp">Download</a></li> -->
+				<li><a href="logout.jsp">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div class="content">
+			<div>
+				<div>
+					
+
+					<p>
+					<div class="CSSTableGenerator">
+					<table>
+					<tr>
+						<td>SerNo</td>
+						<td>File Name</td>
+						<td>Status</td>
+						<td>Keygen/ <br />Keyupdate</td>
+						<td>View</td>
+						<td>Download</td>
+						
+						
+					</tr>
+					
+					<%
+					int count=1;
+					Connection con=Databasecon.getConnection();
+					String query="select * from file where groups='"+group+"'";
+					PreparedStatement pstmt=con.prepareStatement(query);
+					ResultSet rs=pstmt.executeQuery();
+					while(rs.next())
+					{
+						%>
+						<tr>
+						
+							<%-- <td><%=rs.getInt("sid")%></td> --%>
+							<td><%=count++ %></td>
+							<td><%=rs.getString("fname")%></td>
+							<td><%=rs.getString("status")%></td>
+							<td><a href="timesecretkey.jsp?fid=<%=rs.getInt("sid")%>">Keygen</a> </td>
+							<td><a href="fcontview.jsp?fname=<%=rs.getString("fname")%>&&pkey=<%=rs.getString("pkey")%>">File View</a> </td>
+							<td><a href="fdownload.jsp?fname=<%=rs.getString("fname")%>&&pkey=<%=rs.getString("pkey")%>">Download</a> </td> 
+						 </tr>
+					<%}
+					
+					%>
+					
+					
+					</table>
+					</div>
+					 
+				
+				
+						 
+					 
+					
+					</p>
+
+
+
+				</div>
+			</div>
+		</div>
+		<div class="sidebar">
+			<img src="images/view.png">
+
+
+		</div>
+	</div>
+	<div id="footer">
+		<div class="abc" align="center">
+
+			<p>&copy; Copyright 2021. All Rights Reserved</p>
+
+		</div>
+	</div>
+</body>
+</html>

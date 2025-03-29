@@ -1,0 +1,787 @@
+/** Website template by freewebsitetemplates.com **/
+body {
+	margin :0;
+	padding :0;
+	background :url("../images/bg-body.jpg");
+	line-height :25px;
+}
+
+a {
+	outline :0;
+}
+img {
+	border :0;
+}
+@font-face {
+	font-family :'NunitoRegular';
+	src :url('../fonts/nunito-regular-webfont.eot');
+	src :url('../fonts/nunito-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nunito-regular-webfont.woff') format('woff'),
+		url('../fonts/nunito-regular-webfont.ttf') format('truetype'),
+		url('../fonts/nunito-regular-webfont.svg#NunitoRegular') format('svg');
+	font-weight :normal;
+	font-style :normal;
+}
+@font-face {
+	font-family :'Lobster1.4Regular';
+	src :url('../fonts/lobster-webfont.eot');
+	src :url('../fonts/lobster-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/lobster-webfont.woff') format('woff'),
+		url('../fonts/lobster-webfont.ttf') format('truetype'),
+		url('../fonts/lobster-webfont.svg#Lobster1.4Regular') format('svg');
+	font-weight :normal;
+	font-style :normal;
+}
+@font-face {
+	font-family :'LimelightRegular';
+	src :url('../fonts/limelight-webfont.eot');
+	src :url('../fonts/limelight-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/limelight-webfont.woff') format('woff'),
+		url('../fonts/limelight-webfont.ttf') format('truetype'),
+		url('../fonts/limelight-webfont.svg#LimelightRegular') format('svg');
+	font-weight :normal;
+	font-style :normal;
+}
+#header {
+	height :205px;
+	width :100%;
+	background :transparent url("../images/bg-navigation.png");
+	background-repeat :repeat-x;
+	background-position :bottom;
+}
+#header div {
+	width :1000px;
+	margin :0 auto;
+	height :203px;
+	position :relative;
+}
+#header div a img {
+	border :0;
+	float :right;
+	overflow :hidden;
+}
+#header div img.logo {
+	border :0;
+	float :left;
+	overflow :hidden;
+	margin-top :40px;
+}
+#header div ul.navigation {
+	margin :0;
+	padding :0;
+	list-style-type :none;
+	position :absolute;
+	left :0px;
+	top :160px;
+	overflow :hidden;
+	/* width :620px; */
+}
+#header div ul.navigation li {
+	float :left;
+}
+#header div ul.navigation li:first-child a {
+	padding-left :0;
+}
+#header div ul.navigation li a {
+	text-decoration :none;
+	padding :0 30px;
+	color :#ebe9d7;
+	font-family :'Lobster1.4Regular';
+	font-size :16px;
+	color :#94c4c7;
+	font-size :21px;
+}
+#header div ul.navigation li a:hover {
+	color :#ebe9d7;
+}
+#header div ul.navigation li a.active {
+	color :#ebe9d7;
+}
+#body {
+	width :1020px;
+	margin :0 auto;
+	overflow :hidden;
+}
+#body .featured {
+	width :960px;
+	overflow :hidden;
+	margin-bottom :0;
+}
+#body .featured img {
+	border :0;
+}
+#body .featured h2 {
+	font-family :'Lobster1.4Regular';
+	font-size :36px;
+	color :#1b6568;
+	display :block;
+	font-weight :normal;
+}
+#body .featured p {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#4c1407;
+}
+#body .featured p a {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#4c1407;
+}
+#body .featured p a:hover {
+	color :#80210b;
+}
+#body .featured ul {
+	list-style-type :none;
+	margin :40px 0 0 0;
+	padding :0;
+}
+#body .featured ul li {
+	float :left;
+	width :320px;
+	height :242px;
+	text-align :center;
+}
+#body .featured ul li {
+	background :transparent url("../images/frame.png");
+	background-repeat :no-repeat;
+	background-position :top;
+	height :202px;
+	width :280px;
+	padding :8px 22px 22px 18px;
+}
+#body #content {
+	width :960px;
+	margin :30px 0;
+	height :auto;
+	padding-top :18px;
+	background :transparent url("../images/bg-content-top.png");
+	background-position :center top;
+	background-repeat :no-repeat;
+}
+#body #content div {
+	width :960px;
+	background :transparent url("../images/bg-content-bottom.png");
+	background-position :center bottom;
+	background-repeat :no-repeat;
+	padding-bottom :22px;
+}
+#body #content div div {
+	width :860px;
+	padding :10px 50px 20px 50px;
+	background :transparent url("../images/bg-content.png");
+	background-position :center center;
+	background-repeat :repeat-y;
+}
+#body #content div div h1 {
+	font-family :'Lobster1.4Regular';
+	font-size :36px;
+	color :#1b6568;
+	font-weight :normal;
+	margin-bottom :50px;
+}
+#body #content div div ul {
+	list-style-type :none;
+	margin :0;
+	padding :0;
+}
+#body #content div div ul li {
+	float :none;
+	margin :0 0 50px 0;
+	padding :0;
+}
+#body #content div div ul li h4 {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#822619;
+	font-weight :normal;
+}
+#body #content div div ul li h2 {
+	font-family :'Lobster1.4Regular';
+	font-size :18px;
+	color :#822619;
+	font-weight :normal;
+}
+#body #content div div ul li h2 a {
+	font-family :'Lobster1.4Regular';
+	font-size :24px;
+	color :#822619;
+	text-decoration :none;
+	font-weight :normal;
+}
+#body #content div div ul li p {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#822619;
+	font-weight :normal;
+}
+#body #content div div ul li p a {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#822619;
+	font-weight :normal;
+	text-decoration :underline;
+}
+#body #content div div ul li p a:hover {
+	color:#a0210b;
+}
+#body #content div div ul li p span {
+	font-family :'NunitoRegular';
+	font-size :14px;
+	color :#822619;
+	font-weight :normal;
+}
+#body #content div div ul li h2 a:hover {
+	color :#80210b;
+}
+#body .content div div form label {
+	display :block;
+}
+#body .content div div form label span {
+	display :block;
+	color :#4c1407;
+	font-family :'NunitoRegular';
+	font-size :16px;
+	font-weight :normal;
+}
+#body .content div div form label input {
+	background :transparent url("../images/interface.png") no-repeat 0 -77px;
+	width :286px;
+	height :20px;
+	border :0;
+	padding :5px;
+	margin-bottom :10px;
+}
+#body .content div div form label textarea {
+	background :transparent url("../images/interface.png") no-repeat 0 -157px;
+	width :522px;
+	height :206px;
+	border :0;
+	padding :5px;
+	margin-bottom :5px;
+}
+ 
+#body .content {
+	width :620px;
+	margin :30px 40px 30px 0;
+	height :auto;
+	padding-top :18px;
+	background :transparent url("../images/bg-content-top2.png");
+	background-position :center top;
+	background-repeat :no-repeat;
+	float :left;
+}
+#body .content div {
+	width :620px;
+	background :transparent url("../images/bg-content-bottom2.png");
+	background-position :center bottom;
+	background-repeat :no-repeat;
+	padding-bottom :12px;
+}
+#body .content div div {
+	width :540px;
+	padding :10px 40px 20px 40px;
+	background :transparent url("../images/bg-content2.png");
+	background-position :center center;
+	background-repeat :repeat-y;
+}
+#body .content div div h4 {
+	font-size :24px;
+	color :#822619;
+	font-family :'Lobster1.4Regular';
+	font-weight :normal;
+}
+#body .content div div p {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#4c1407;
+	text-align :justify;
+}
+#body .content div div p a {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#4c1407;
+}
+#body .content div div p a:hover {
+	color :#80210b;
+}
+#body .content div div h1 {
+	font-family :'Lobster1.4Regular';
+	font-size :36px;
+	color :#1b6568;
+	font-weight :normal;
+}
+#body .content div div ul {
+	list-style-type :none;
+	margin :0;
+	padding :0;
+	width :580px;
+	margin-left :-22px;
+}
+#body .content div div ul li {
+	margin-bottom :20px;
+	border-style :dotted;
+	border-top :none;
+	border-left :none;
+	border-right :none;
+	padding :0 25px 10px 25px;
+	position :relative;
+}
+#body .content div div ul li.last {
+	border :none;
+}
+#body .content div div ul li h2 a {
+	font-family :'Lobster1.4Regular';
+	font-size :24px;
+	color :#822619;
+	font-weight :normal;
+	text-decoration :none;
+}
+#body .content div div ul li p {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#822619;
+	font-weight :normal;
+	text-decoration :none;
+	width :440px;
+}
+#body .content div div ul li p a {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#822619;
+	font-weight :normal;
+}
+#body .content div div ul li p a:hover {
+	font-family :'NunitoRegular';
+	font-size :16px;
+	color :#80210b;
+	font-weight :normal;
+}
+#body .content div div ul li span.price {
+	background :transparent url("../images/icon.png") no-repeat 0 -673px;
+	width :70px;
+	height :70px;
+	display :block;
+	text-align :center;
+	line-height :70px;
+	font-family :'LimelightRegular';
+	color :#ebe9d7;
+	font-size :28px;
+	position :absolute;
+	left :490px;
+	top :0px;
+}
+#body .content div div div {
+	background :none;
+	text-align :center;
+	width :530px;
+	margin :0;
+	padding :0;
+}
+#body .sidebar {
+	width :320px;
+	float :left;
+	margin :20px 0;
+	text-align :center;
+	padding-top :20px;
+	
+	/* width :320px;
+	float :left;
+	margin :30px 0;
+	text-align :center;
+	padding-top :30px; */
+}
+#body .sidebar h1 {
+	color :#1b6568;
+	font-family :'Lobster1.4Regular';
+	font-size :36px;
+	font-weight :normal;
+	margin-bottom :10px;
+}
+#body .sidebar span {
+	color :#4c1407;
+	font-family :'NunitoRegular';
+	font-size :16px;
+	font-weight :normal;
+	display :block;
+}
+#body .sidebar ul.navigation {
+	list-style-type :none;
+	margin :50px 0 0 0;
+	padding :0;
+}
+#body .sidebar ul.navigation li {
+	border-style :solid;
+	border-color :#822619;
+	border-left :none;
+	border-right :none;
+	border-top :none;
+	height :50px;
+	line-height :50px;
+}
+#body .sidebar ul.navigation li.first {
+	border-style :solid;
+	border-color :#822619;
+	border-left :none;
+	border-right :none;
+}
+#body .sidebar ul.navigation li a {
+	text-decoration :none;
+	font-family :'LimelightRegular';
+	font-size :32px;
+	color :#822619;
+	text-align :center;
+	font-weight :normal;
+}
+#body .sidebar ul.navigation li a:hover {
+	color :#1b6568;
+	font-size :32px;
+	font-family :'LimelightRegular';
+}
+#body .sidebar ul.navigation li a.active {
+	color :#1b6568;
+	font-size :32px;
+	font-family :'LimelightRegular';
+}
+#body .sidebar a.download {
+	background :transparent url("../images/button.png") no-repeat 0 -96px;
+	display :block;
+	height :46px;
+	width :278px;
+	line-height :46px;
+	text-decoration :none;
+	color :#ebe9d7;
+	font-size :26px;
+	font-family :'Lobster1.4Regular';
+	margin-top :40px;
+}
+#body .sidebar a.download:hover {
+	background :transparent url("../images/button.png") no-repeat 0 0;
+}
+#body .sidebar ul li.last {
+	border-bottom :none;
+}
+#body .sidebar ul {
+	list-style-type :none;
+	margin :0 0 50px 0;
+	padding :0;
+}
+#body .sidebar ul li.first {
+	border-style :dotted;
+	border-color :#822619;
+	border-left :none;
+	border-right :none;
+	border-top :dotted;
+}
+#body .sidebar ul li {
+	border-style :dotted;
+	border-color :#822619;
+	border-left :none;
+	border-right :none;
+	border-top :none;
+	line-height :18px;
+	padding :10px 10px;
+	font-family :'NunitoRegular';
+}
+#body .sidebar ul li a {
+	font-family :'NunitoRegular';
+	text-decoration :none;
+	color :#3e1c14;
+	font-size :16px;
+}
+#body .sidebar ul li a:hover {
+	font-family :'NunitoRegular';
+	text-decoration :none;
+	color :#1B6568;
+	font-size :16px;
+}
+#body .sidebar ul {
+	margin-top :30px;
+}
+#body div#section {
+	float :left;
+	height :auto;
+	margin :30px 40px 30px 0;
+	padding-top :18px;
+	width :620px;
+}
+#body div#section div.section {
+	background :transparent url("../images/bg-blog-top.png");
+	background-repeat :no-repeat;
+	background-position :top center;
+	width :532px;
+	padding-top :18px;
+	margin :0 0 50px 0;
+	position :relative;
+	left :20px;
+	float :right;
+}
+#body div#section div.section div {
+	background :transparent url("../images/bg-blog-bottom.png");
+	background-repeat :no-repeat;
+	background-position :center bottom;
+	width :532px;
+	padding-bottom :25px;
+}
+#body div#section div.section div div {
+	background :transparent url("../images/bg-blog-center.png");
+	background-repeat :repeat-y;
+	background-position :center;
+	width :452px;
+	padding :10px 40px 10px 40px;
+}
+#body div#section div.section div div a img {
+	border :0;
+	margin :0 20px 0 0;
+	float :left;
+}
+#body div#section div.section div div h2 {
+	font-family :'LimelightRegular';
+	color :#1b6568;
+	font-size :28px;
+	font-weight :normal;
+	margin :0;
+	padding :0;
+	text-transform :uppercase;
+	width :auto;
+}
+#body div#section div.section div div h2 a {
+	font-family :'LimelightRegular';
+	color :#822619;
+	font-size :28px;
+	font-weight :normal;
+	text-decoration :none;
+	line-height :30px;
+}
+#body div#section div.section div div h2 a:hover {
+	color :#1b6568;
+	text-decoration :none;
+}
+#body div#section div.section div div h3 {
+	font-family :'NunitoRegular';
+	color :#4c1407;
+	font-size :14px;
+	font-weight :normal;
+	margin :25px 0 0 0;
+	padding :0;
+	width :auto;
+}
+#body div#section div.section div div h3 a {
+	color :#80210b;
+	text-decoration :underline;
+}
+#body div#section div.section div div a {
+	text-decoration :underline;
+	color :#80210b;
+}
+#body div#section div.section div div a:hover {
+	text-decoration :underline;
+}
+#body div#section div.section div div a span {
+	font-family :'NunitoRegular';
+	color :#80210b;
+	font-size :14px;
+	font-weight :normal;
+	padding :0;
+	width :auto;
+}
+#body div#section div.section div div p {
+	font-family :'NunitoRegular';
+	color :#4c1407;
+	font-size :14px;
+	width :auto;
+	margin-top :70px;
+}
+#body div#section div.section div div a.price {
+	background :transparent url("../images/icon.png") no-repeat 0 0;
+	width :90px;
+	height :69px;
+	display :block;
+	padding-top :20px;
+	text-align :center;
+	font-family :'LimelightRegular';
+	font-size :24px;
+	color :#ebe9d7;
+	text-decoration :none;
+	position :absolute;
+	top :0;
+	left :-100px;
+}
+#body div#section div.section div div a.price span {
+	display :block;
+	font-family :'LimelightRegular';
+	font-size :24px;
+	color :#ebe9d7;
+}
+#footer {
+	height :130px;
+	width :100%;
+	padding :20px 0;
+	margin-top :20px;
+	background :transparent url("../images/bg-footer.jpg");
+	background-repeat :repeat-x;
+	background-position :top;
+	background-color :#1b6568;
+}
+#footer div {
+	width :960px;
+	margin :0 auto;
+}
+#footer div ul {
+	list-style-type :none;
+	margin :0;
+	padding :0;
+	align : center;
+}
+#footer div ul li.first {
+	text-align :center;
+}
+#footer div ul li img {
+	border :0;
+}
+#footer div ul li {
+	float :left;
+	width :300px;
+	padding :0 5px;
+	text-align :center;
+}
+#footer div ul li.last {
+	align:center;
+	padding-left :75px;
+	width :250px;
+}
+#footer div ul li h2 {
+	color :#ebe9d7;
+	font-family :'Lobster1.4Regular';
+	font-weight :normal;
+	font-size :18px;
+	margin :10px 0;
+	padding :0;
+}
+#footer .abc{
+	color :#ebe9d7;
+	font-family :'NunitoRegular';
+}
+#footer div ul li h3 {
+	color :#ebe9d7;
+	font-family :'Lobster1.4Regular';
+	font-size :24px;
+	font-weight :normal;
+	margin :10px 0;
+	padding :0;
+}
+#footer div ul li ul {
+	list-style-type :none;
+	margin :0;
+	padding :0;
+}
+#footer div ul li img.logo {
+	margin-top :20px;
+}
+#footer div ul li ul li {
+	float :left;
+	width :auto;
+	margin :0 5px;
+	padding :0;
+}
+#footer div ul li ul .connect li {
+	float :left;
+	width :auto;
+	margin :0 5px;
+	padding :0;
+}
+#footer div ul li ul li a.facebook {
+	background :transparent url("../images/icon.png") no-repeat 0 -228px;
+	float :left;
+	height :39px;
+	width :39px;
+}
+#footer div ul li ul li a.facebook:hover {
+	background :transparent url("../images/icon.png") no-repeat 0 -139px;
+}
+#footer div ul li ul li a.twitter {
+	background :transparent url("../images/icon.png") no-repeat 0 -584px;
+	float :left;
+	height :39px;
+	width :39px;
+}
+#footer div ul li ul li a.twitter:hover {
+	background :transparent url("../images/icon.png") no-repeat 0 -495px;
+}
+#footer div ul li ul li a.googleplus {
+	background :transparent url("../images/icon.png") no-repeat 0 -406px;
+	float :left;
+	height :39px;
+	width :92px;
+}
+#footer div ul li ul li a.googleplus:hover {
+	background :transparent url("../images/icon.png") no-repeat 0 -317px;
+}
+#footer div ul li input[type="submit"] {
+	background :transparent url("../images/button.png") no-repeat 0 -278px;
+	width :215px;
+	height :36px;
+	border :0;
+	cursor :pointer;
+}
+#footer div ul li input[type="submit"]:hover {
+	background :transparent url("../images/button.png") no-repeat 0 -192px;
+}
+#footer div ul li input {
+	background :transparent url("../images/interface.png") no-repeat 0 0;
+	border :0;
+	width :220px;
+	height :17px;
+	padding :5px 5px;
+	text-align :center;
+	font-family :'NunitoRegular';
+	font-size :12px;
+	margin-bottom :10px;
+}
+#footer div ul li span {
+	display :block;
+	color :#ebe9d7;
+	font-family :'NunitoRegular';
+	font-size :14px;
+}
+#footer div ul li ul.navigation {
+	list-style-type :none;
+	margin :0 auto;
+	padding :10px 0 0 0;
+	display :inline-block;
+	overflow :hidden;
+	height :20px;
+}
+#footer div ul li ul.navigation li {
+	margin :0;
+	padding :0;
+}
+#footer div ul li ul.navigation li a {
+	color :#ebe9d7;
+	font-family :'NunitoRegular';
+	font-weight :normal;
+	font-size :14px;
+	text-decoration :none;
+	padding :0 10px;
+	display :block;
+	border-style :solid;
+	border-right :none;
+	border-top :none;
+	border-bottom :none;
+	border-color :#ebe9d7;
+	border-width :1px;
+	line-height :20px;
+}
+#footer div ul li ul.navigation li a:hover {
+	text-decoration :underline;
+}
+#footer div ul li ul.navigation li:first-child a {
+	border-left :none;
+}
+p.sp 
+	{
+    	line-height: 50px;
+    	text-align:center;
+    	font-size:50px;
+    	font-weight:bold;
+    	color:#0000FF;
+	}

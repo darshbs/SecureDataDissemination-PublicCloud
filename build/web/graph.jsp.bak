@@ -1,0 +1,254 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page language="java" import="java.sql.*,com.dbasecon.Databasecon" errorPage="" %>
+<%@ page language="java" import="java.io.File"%>
+<%@ page language="java" import="org.jfree.chart.ChartFactory"%>
+<%@ page language="java" import="org.jfree.chart.ChartUtilities"%>
+<%@ page language="java" import="org.jfree.chart.JFreeChart"%>
+<%@ page language="java" import="org.jfree.chart.plot.PlotOrientation"%>
+<%@ page language="java" import="org.jfree.data.jdbc.JDBCCategoryDataset"%>
+ 
+ <html>
+<head>
+	<title>File Content</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<style>
+	</style>
+</head>
+<body>
+<%
+int user=0,files=0,keygen=0,keynotgen=0;
+
+Connection con=null;
+// Number of Users
+try
+{
+	con=Databasecon.getConnection();
+	String query="select Uname from registration";
+	PreparedStatement pstmt=con.prepareStatement(query);
+	ResultSet rs=pstmt.executeQuery();
+	while(rs.next())
+	{
+		user++;
+	}
+}
+catch(Exception e)
+{
+	e.printStackTrace();
+}
+
+System.out.println("No of users : "+user);
+
+// Number of Files
+try
+{
+	con=Databasecon.getConnection();
+	String query="select fname from file";
+	PreparedStatement pstmt=con.prepareStatement(query);
+	ResultSet rs=pstmt.executeQuery();
+	while(rs.next())
+	{
+		files++;
+	}
+}
+catch(Exception e)
+{
+	e.printStackTrace();
+}
+System.out.println("No of Files : "+files);
+
+//Key Gen
+try
+{
+	con=Databasecon.getConnection();
+	String query="select status from file where status='Generated'";
+	PreparedStatement pstmt=con.prepareStatement(query);
+	ResultSet rs=pstmt.executeQuery();
+	while(rs.next())
+	{
+		keygen++;
+	}
+}
+catch(Exception e)
+{
+	e.printStackTrace();
+}
+System.out.println("Key Gen : "+keygen);
+
+
+//Key Not Gen
+try
+{
+	con=Databasecon.getConnection();
+	String query="select status from file where status='Key Not Gen'";
+	PreparedStatement pstmt=con.prepareStatement(query);
+	ResultSet rs=pstmt.executeQuery();
+	while(rs.next())
+	{
+		keynotgen++;
+	}
+}
+catch(Exception e)
+{
+	e.printStackTrace();
+}
+System.out.println("Key Not Gen : "+keynotgen);
+
+
+//Graph Table Update
+//user=0,files=0,keygen=0,keynotgen=0;
+try
+{
+	con=Databasecon.getConnection();
+	String query="update graph set Users='"+user+"' , Files='"+files+"',Keygen='"+keygen+"',KeynotGen='"+keynotgen+"' where sid='1'";
+	PreparedStatement pstmt=con.prepareStatement(query);
+	int x=pstmt.executeUpdate();
+	if(x>0)
+	{
+		System.out.println("Graph Updated");
+	}else
+	{
+		System.out.println("Graph Not Updated");
+	}
+}
+catch(Exception e)
+{
+	e.printStackTrace();
+}
+ 
+
+//Graph Creation
+
+//Graph
+					
+					 String gph="Graph";
+		
+    				String dirname=getServletContext().getRealPath("");
+    				String dir=dirname+"/"+gph;
+    				System.out.println("Directory"+dir);
+	 
+	
+	  
+		  			File fold=new File(dir);
+					if(!fold.exists())
+					{
+						fold.mkdir();
+						System.out.println("Folder Created");
+			
+					} 
+							
+							
+							
+							 
+					try
+					{
+						
+					 
+					 String query="select * from graph";
+					JDBCCategoryDataset dataset=new JDBCCategoryDataset("jdbc:mysql://localhost:3306/cloudstoragekey","com.mysql.jdbc.Driver","root","1234");
+
+					dataset.executeQuery(query);
+					JFreeChart chart = ChartFactory .createBarChart3D("Users and Files with Key Generation", "Graph Details", "Numbers",dataset, PlotOrientation.VERTICAL, true, true, false);
+					
+					
+
+					
+					ChartUtilities.saveChartAsJPEG(new File(dir+"/"+"chart2.jpg"), chart, 800, 400);
+
+					}
+					catch (Exception e)
+					{
+						e.printStackTrace();
+					System.out.println("Problem in creating chart.");
+					}
+					
+					 
+
+
+%>
+
+
+
+
+
+	<div id="header">
+		<div>
+			<p class="sp"> Secure Data Group Sharing and Dissemination<br> Attribute and Time Conditions in Public Cloud </p>
+			
+			<ul class="navigation">
+				<!-- <li><a href="/CloudStorageAuditKey/index.html">Home</a></li> -->
+				<li><a href="auditview.jsp">File View</a></li>
+				<li><a  class="active" href="graph.jsp">Graph</a></li>
+				<li><a href="logout.jsp">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="content">
+			<div>
+				<div>
+				
+				
+				<table>	
+					<tr>
+						<td>	  
+							<img src="<%=request.getContextPath()%>/Graph/chart2.jpg" />
+						</td>
+					</tr>			  
+									  
+			 		</table>
+				
+				<!-- <form action="auditfilecontview.jsp" name="form" method="post"
+						onSubmit="return validation()">
+	
+						<table width="70%" align="center" cellpadding="5px"
+							cellspacing="5px">
+
+							<tr>
+
+								<th colspan="2" align="center">
+									<p>
+										<strong><font color="#D1102D" size="6">File View</font></strong>
+									</p>
+								</th>
+								<th></th>
+
+							</tr>
+
+							<tr>
+								<td>
+									<p>
+										<strong><font color="#333399" size="4">File Name 
+
+
+										
+									</p> </font></strong>
+									</p>
+								</td>
+								<td><p>
+										<input type="text" name="fname"  required readonly>
+									</p>
+								</td>
+								<td>
+								</td>
+								
+							</tr>
+							
+						</table>
+						 
+					</form> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="abc" align="center">
+			
+					<p>
+					 &copy; Copyright 2021. All Rights Reserved
+					</p>
+				 
+		</div>
+	</div>
+</body>
+</html>

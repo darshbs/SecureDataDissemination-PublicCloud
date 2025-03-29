@@ -59,10 +59,7 @@ Set Access Conditions: Define who can access the data and for how long.
 
 Retrieve Data: Only authorized users within the allowed time frame can access the data.
 
-Future Enhancements
-🔹 Integration with blockchain for enhanced security
-🔹 Real-time monitoring & auditing of access logs
-🔹 Support for multi-cloud storage solutions
+
 
 Contributing
 Contributions are welcome! Feel free to submit pull requests or report issues.
